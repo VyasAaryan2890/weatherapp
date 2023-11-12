@@ -114,20 +114,20 @@ display: none;
         padding: 19px 27px;
     }
     .we-icon {
-        width: 150px;
+        width: 202px;
         margin-top: 30px;
-        margin-left: 19%;
+        margin-left: 14%;
     }
     .we h1 {
         font-size: 60px;
         font-weight: 500;
-        margin-left: 23%;
+        margin-left: 27%;
     }
     .we h2 {
         font-size: 45px;
         font-weight: 400;
         margin-top: 3px;
-        margin-left: 23%;
+        margin-left: 28%;
     }
     .details {
         display: flex;
