@@ -142,4 +142,13 @@ display: none;
     }body{
         background-color:#fff;
     }
+	.search button {
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 55px;
+    cursor: pointer;
+    background-color: #fff;
+}
 }
