@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" alt="" spellcheck="false">
+            <button><img src="images/search.png" alt=""></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+        <div class="we">
+            <img src="images/rain.png" alt="" class="we-icon">
+            <h1 class="tem">22°C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="hu">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind">15 kmh</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    const apiKey = "c8de0bef336d5f132c9134064f58d8d5";
+    const apiUrl ="https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+    const search =document.querySelector(".search input");
+    const searchBtn =document.querySelector(".search button");
+    const weicon =document.querySelector(".we-icon");
+
+
+    async function checkWeather(city){
+        const response = await fetch(apiUrl + city +`&appid=${apiKey}`);
+
+        if(response.status ==404){
+            document.querySelector(".error").style.display="block";
+            document.querySelector(".we").style.display="none";
+        }
+        else{
+
+            var data =await response.json();
+            document.querySelector(".city").innerHTML =data.name;
+        document.querySelector(".tem").innerHTML= Math.round(data.main.temp ) +"°C";
+        document.querySelector(".hu").innerHTML=data.main.humidity +"%";
+        document.querySelector(".wind").innerHTML=data.wind.speed + "km/h";
+
+        if(data.weather[0].main=='Clouds')
+        {
+            weicon.src="images/clouds.png";
+        }
+        else if(data.weather[0].mian=="Clear"){
+            weicon.src="images/clear.png";
+        }
+        else if(data.weather[0].main=="Rain"){
+            weicon.src="images/rain.png";
+        }
+        else if(data.weather[0].main=="Drizzle"){
+            weicon.src="images/drizzle.png";
+        }
+        else if(data.weather[0].main=="Mist"){
+            weicon.src="images/mist.png";
+        }
+
+        document.querySelector(".we").style.display="block";
+        }
+        var data =await response.json();
+
+        
+
+        document.querySelector(".city").innerHTML =data.name;
+        document.querySelector(".tem").innerHTML= Math.round(data.main.temp ) +"°C";
+        document.querySelector(".hu").innerHTML=data.main.humidity +"%";
+        document.querySelector(".wind").innerHTML=data.wind.speed + "km/h";
+
+        if(data.weather[0].main=='Clouds')
+        {
+            weicon.src="images/clouds.png";
+        }
+        else if(data.weather[0].mian=="Clear"){
+            weicon.src="images/clear.png";
+        }
+        else if(data.weather[0].main=="Rain"){
+            weicon.src="images/rain.png";
+        }
+        else if(data.weather[0].main=="Drizzle"){
+            weicon.src="images/drizzle.png";
+        }
+        else if(data.weather[0].main=="Mist"){
+            weicon.src="images/mist.png";
+        }
+
+        document.querySelector(".we").style.display="block";
+        document.querySelector(".error").style.display="none";
+    }
+
+    searchBtn.addEventListener("click",()=>{
+        checkWeather(search.value);
+    })
+</script>
+
+</body>
+</html>

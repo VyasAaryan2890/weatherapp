@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: #222;
+
+}
+.card{
+    width: 90%;
+    max-width: 410px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    margin: 100px auto;
+    border-radius: 20px;
+    padding: 40px 35px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    background-color: #efffc;
+    color: #555;
+    padding: 22px 25px;
+    border-radius:30px;
+    flex:1;
+    margin-right:16px;
+    fot-size:16px;
+}
+.search button{
+    border: 0;
+    outline: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search button img{
+    width: 25px;
+}
+.we-icon{
+    width: 150px;
+    margin-top: 30px;
+    margin-left: 30%;
+}
+.we h1{
+    font-size:60px;
+    font-weight: 500;
+    margin-left: 37%;
+}
+.we h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: 3px;
+    margin-left: 27%;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.col img{
+    width: 40px;
+    margin-right: 10px;
+}
+.hu,.wind{
+    font-size: 28px;
+    margin-top: -6px;
+}
+.we{
+    display: none ;
+    transition: 1s;
+}
+.error{
+margin-left: 28%;
+margin-top: 5%;
+font-size: 20px;
+color: red;
+font-weight: 500;
+display: none;
+}
+@media(max-width:477px){
+    .col img {
+        width: 33px;
+        margin-right: 20px;
+        margin-left: -30%;
+    }
+    .col {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-right: -29%;
+    }
+    .card {
+        width: 71%;
+        max-width: 410px;
+        background: linear-gradient(135deg,#00feba,#5b548a);
+        color: #fff;
+        margin:57px auto;
+        border-radius: 20px;
+        padding: 19px 27px;
+    }
+    .we-icon {
+        width: 150px;
+        margin-top: 30px;
+        margin-left: 19%;
+    }
+    .we h1 {
+        font-size: 60px;
+        font-weight: 500;
+        margin-left: 23%;
+    }
+    .we h2 {
+        font-size: 45px;
+        font-weight: 400;
+        margin-top: 3px;
+        margin-left: 23%;
+    }
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .error{
+        margin-left: 10%;
+    }body{
+        background-color:#fff;
+    }
+}
