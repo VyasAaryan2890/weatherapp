@@ -116,18 +116,18 @@ display: none;
     .we-icon {
         width: 202px;
         margin-top: 30px;
-        margin-left: 14%;
+        margin-left: -5%;
     }
     .we h1 {
         font-size: 60px;
         font-weight: 500;
-        margin-left: 27%;
+        margin-left: -4%;
     }
     .we h2 {
         font-size: 45px;
         font-weight: 400;
         margin-top: 3px;
-        margin-left: 28%;
+        margin-left: -2%;
     }
     .details {
         display: flex;
@@ -154,4 +154,6 @@ display: none;
 .search button img {
     width: 21px;
 }
+.we{
+	text-align:center;
 }
